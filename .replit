@@ -1,0 +1,11 @@
+run = "php -S 0.0.0.0:8000 -t ."
+
+entrypoint = "index.php"
+modules = ["python-3.10:v25-20230920-d4ad2e4"]
+
+[nix]
+channel = "stable-22_11"
+
+[deployment]
+run = ["php", "-S", "0.0.0.0:8000", "-t", "."]
+deploymentTarget = "cloudrun"
